@@ -42,3 +42,15 @@ debug.bat
 
 ## 端口配置
 应用默认在9090端口运行，可在`src/main/resources/application.properties`中修改。
+
+## Elasticsearch和Kafka集成
+项目已集成Elasticsearch和Kafka，提供了以下API端点：
+
+### Elasticsearch端点
+- 保存产品：POST http://localhost:9090/es-kafka/product
+- 获取产品：GET http://localhost:9090/es-kafka/product/{id}
+
+### Kafka端点
+- 发送消息：POST http://localhost:9090/es-kafka/message?message=your_message_here
+
+使用这些端点前，请确保已安装并运行Elasticsearch和Kafka服务。
